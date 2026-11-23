@@ -1,4 +1,5 @@
-import axios, { type AxiosInstance } from 'axios';
+import type { AxiosInstance } from 'axios';
+import { browserApi } from './api/client';
 import type { Note, NewNote, NoteTag } from '@/types/note';
 
 interface FetchNotesParams {
@@ -12,8 +13,6 @@ interface FetchNotesResponse {
   notes: Note[];
   totalPages: number;
 }
-
-const browserApi = axios.create({ baseURL: '/api', timeout: 12_000 });
 
 export async function fetchNotes(
   { search, page, tag, signal }: FetchNotesParams,

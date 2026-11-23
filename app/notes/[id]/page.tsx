@@ -6,7 +6,7 @@ import {
 import { fetchNoteById } from '@/lib/api';
 import { getNoteHubClient } from '@/lib/api/server';
 import { noteKey } from '@/lib/queries';
-import NoteDetailsClient from '../NoteDetails.client';
+import NoteDetailsClient from './NoteDetails.client';
 
 interface NoteDetailsProps {
   params: Promise<{ id: string }>;
